@@ -1,0 +1,4 @@
+org/example/service/ParserService.class
+org/example/repository/CurrencyRepository.class
+org/example/controller/CurrencyController.class
+org/example/model/CurrencyRate.class
