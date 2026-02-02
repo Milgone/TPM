@@ -1,36 +1,35 @@
-package org.example.model;
+package org.example.dto;
 
-import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
-@Entity
-public class CurrencyRate {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class CurrencyRateDto {
+
     private String name;
     private Double price;
     private String changeDay;
     private LocalDateTime captureDate;
 
-    public CurrencyRate() {}
-    public CurrencyRate(String name, Double price, String change, LocalDateTime date) {
-        this.name = name; this.price = price; this.changeDay = change; this.captureDate = date;
-    }
-    public Long getId() {
-        return id;
+    public CurrencyRateDto() {
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public CurrencyRateDto(String name, Double price, String changeDay, LocalDateTime captureDate) {
+        this.name = name;
+        this.price = price;
+        this.changeDay = changeDay;
+        this.captureDate = captureDate;
     }
 
-    public String getName() { return name; }
+    public String getName() {
+        return name;
+    }
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public Double getPrice() { return price; }
+    public Double getPrice() {
+        return price;
+    }
 
     public void setPrice(Double price) {
         this.price = price;
@@ -52,3 +51,4 @@ public class CurrencyRate {
         this.captureDate = captureDate;
     }
 }
+
